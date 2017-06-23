@@ -1,3 +1,4 @@
+import com.uet.AlertWindow;
 import com.uet.DropDownBox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * Created by nguye on 6/22/2017.
  */
 public class Application {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.gecko.driver", "E:/Setup-Application/geckodriver-v0.17.0-win64/geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
         driver.get("http://demo.guru99.com/"); //launch Firefox and open Url
@@ -24,6 +25,9 @@ public class Application {
 
 //        DropDownBox dropDownBox = new DropDownBox();
 //        dropDownBox.test();
+
+//        AlertWindow alertWindow = new AlertWindow();
+//        alertWindow.testAlertWindow();
 
     }
 }

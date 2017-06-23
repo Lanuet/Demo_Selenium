@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.Select;
  * Created by nguye on 6/22/2017.
  */
 public class DropDownBox {
+    /*
+    Show dropdown box
+     */
     public void test(){
         System.setProperty("webdriver.gecko.driver", "E:/Setup-Application/geckodriver-v0.17.0-win64/geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
@@ -16,8 +19,8 @@ public class DropDownBox {
         driver.get(baseUrl);
         driver.manage().window().maximize();
         Select select = new Select(driver.findElement(By.xpath("//*[@name=combo_box]/../select")));
-//        select.selectByVisibleText("Saab");
-//        select.selectByIndex(2);
+        select.selectByVisibleText("Saab");
+        select.selectByIndex(2);
         select.selectByValue("UK");
     }
 }
